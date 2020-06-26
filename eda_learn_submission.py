@@ -431,6 +431,7 @@ aig_dir         =  "aig_data_" + hour + minute
 try:
     os.mkdir(verilog_dir)
     os.mkdir(aig_dir)
+    os.mkdir('temp')
 except OSError:
     print ("Creation of the directory failed %s " % verilog_dir )
 else:
