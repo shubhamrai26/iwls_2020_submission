@@ -335,7 +335,7 @@ def call_abc(file_num, verilog_file, aig_file):
         return result, naive, and_gate
 
 def call_native_abc(file_num, verilog_file, aig_file):
-    abc_call =  "abc -q " + "\"read train_data/ex{:02d}.train.pla;".format(file_num) + "strash; write_aiger tmp/ex{:02d}.aig;".format(file_num) + "&read tmp/ex{:02d}.aig;ps;&mltest ".format(file_num) + "validation_data/ex{:02d}.valid.pla".format(file_num) + "\""
+    abc_call =  "abc -q " + "\"read train_data/ex{:02d}.train.pla;".format(file_num) + "strash; write_aiger temp/ex{:02d}.aig;".format(file_num) + "&read temp/ex{:02d}.aig;ps;&mltest ".format(file_num) + "validation_data/ex{:02d}.valid.pla".format(file_num) + "\""
     print(abc_call)
     c_str = "Correct = "
     n_str = "Naive"
